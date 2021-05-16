@@ -45,6 +45,25 @@ class ProvinceTest < Minitest::Test
       @asia.profit
     }
   end
+
+  def test_producers_empty_string_demand
+    data = {
+      name: "String producers",
+      producers: "",
+      demand: 30,
+      price: 20
+    }
+
+    assert_raises() {
+      prov = Province.new(data)
+    }
+    assert_raises() {
+      @prov.shortfall
+    }
+    assert_raises() {
+      @prov.profit
+    }
+  end
   
 end
 
