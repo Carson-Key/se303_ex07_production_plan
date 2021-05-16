@@ -5,4 +5,8 @@ require_relative '../lib/producer'
 
 class ProducerTest < Minitest::Test
 
+    def setup
+        @asia = Province.new(sample_province_data)
+    end
+
 end
