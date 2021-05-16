@@ -28,7 +28,7 @@ class Province
   end
 
   def profit
-    demand_value - demand_cost
+    demand_value - demand_cost * 2
   end
 
   def demand_cost
