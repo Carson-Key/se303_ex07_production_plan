@@ -24,3 +24,17 @@ class ProvinceTest < Minitest::Test
   end
   
 end
+
+class UnhappyProvinceTest < Minitest::Test
+  
+  def setup
+    data = {
+      name: "No producers",
+      producers: [],
+      demand: 30,
+      price: 20
+    }
+    @asia = Province.new(data)
+  end
+  
+end
