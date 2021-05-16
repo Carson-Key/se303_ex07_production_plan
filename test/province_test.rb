@@ -26,7 +26,7 @@ class ProvinceTest < Minitest::Test
 end
 
 class UnhappyProvinceTest < Minitest::Test
-  
+
   def setup
     data = {
       name: "No producers",
@@ -34,7 +34,11 @@ class UnhappyProvinceTest < Minitest::Test
       demand: 30,
       price: 20
     }
-    @asia = Province.new(data)
+    @noProducers = Province.new(data)
+  end
+
+  def test_shortfall
+    assert_equal(30, @noProducers.shortfall)
   end
   
 end
