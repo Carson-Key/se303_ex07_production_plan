@@ -41,4 +41,8 @@ class UnhappyProvinceTest < Minitest::Test
     assert_equal(30, @noProducers.shortfall)
   end
   
+  def test_profit
+    assert_equal(0, @noProducers.profit)
+  end
+  
 end
